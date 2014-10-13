@@ -1,0 +1,5 @@
+<root>
+    <item name='com.jayway.restassured.internal.http.HTTPBuilder'>
+        <annotation name='java.lang.annotation.Deprecated'/>
+    </item>
+</root>
