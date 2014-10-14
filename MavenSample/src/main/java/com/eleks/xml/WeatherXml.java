@@ -24,7 +24,6 @@ public class WeatherXml implements Weatherable {
 
     @Override
     public List<NewInfWeather> getWeather(String type) {
-        //creatorWeather.createWeatherFile(type);
         return parseXml(creatorWeather.createWeatherString(type));
     }
 
@@ -40,8 +39,6 @@ public class WeatherXml implements Weatherable {
         }
         SAXHandler handler = new SAXHandler();
         try {
-            //parser.parse(new File("E:/samplexml.xml"), handler);
-            //new InputSource(new StringReader(xml))
             parser.parse(new InputSource(new StringReader(str)), handler);
 
         } catch (SAXException e) {
@@ -52,12 +49,6 @@ public class WeatherXml implements Weatherable {
 
         return handler.getInfo2();
 
-    }
-
-    public void printList() {
-//        String result = "";
-//        assert parser != null;
-//        parser.parse(String.valueOf(new StringReader(result)), handler);
     }
 }
 

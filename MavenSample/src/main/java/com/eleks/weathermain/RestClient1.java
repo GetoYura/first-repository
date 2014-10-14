@@ -15,10 +15,10 @@ public class RestClient1 {
         List<NewInfWeather> weatherList = null;
         Weatherable weather;
         CreatorWeatherFile creatorWeatherFile = new CreatorWeatherFile();
-        System.out.println("Let's imagine that this invocation is some fat and major feature that is not ready to be pushed on prod");
-        String local = "E:/sample.xml";
-        String strxml = ".xml";
-        System.out.println(local.toLowerCase().contains(strxml.toLowerCase()));
+//        System.out.println("Let's imagine that this invocation is some fat and major feature that is not ready to be pushed on prod");
+//        String local = "E:/sample.xml";
+//        String strxml = ".xml";
+       // System.out.println(local.toLowerCase().contains(strxml.toLowerCase()));
         try {
             if (args[0].equalsIgnoreCase("XML")) {
 

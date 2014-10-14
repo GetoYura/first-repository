@@ -22,7 +22,6 @@ public class WeatherJson implements Weatherable {
 
     @Override
     public List<NewInfWeather> getWeather(String type) {
-        creatorWeather.createWeatherFile(type);
         return parseJson(creatorWeather.createWeatherString(type));
     }
 

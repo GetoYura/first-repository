@@ -1,8 +1,5 @@
 package com.eleks.inform;
 
-/**
- * Created by Iurii.Geto on 08.10.2014.
- */
 public class Location {
     private String city;
     private String region;
