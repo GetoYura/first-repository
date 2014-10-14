@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb354d8a-99a0-4c45-91c4-b37dfd22fa49" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MavenSample.iml" afterPath="$PROJECT_DIR$/MavenSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MavenSample.iws" />
@@ -585,12 +583,17 @@
       <updated>1412585877941</updated>
       <workItem from="1412585879301" duration="7585000" />
       <workItem from="1412694425597" duration="77537000" />
-      <workItem from="1413296220577" duration="2651000" />
+      <workItem from="1413296220577" duration="2710000" />
     </task>
+    <task id="LOCAL-00001" summary="vs.xml&#10;workspace.xml&#10;mavensample.xml">
+      <created>1413302184050</created>
+      <updated>1413302184050</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87773000" />
+    <option name="totallyTimeSpent" value="87832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -640,6 +643,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="vs.xml&#10;workspace.xml&#10;mavensample.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="vs.xml&#10;workspace.xml&#10;mavensample.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
