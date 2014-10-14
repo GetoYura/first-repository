@@ -15,7 +15,7 @@ public class RestClient1 {
         List<NewInfWeather> weatherList = null;
         Weatherable weather;
         CreatorWeatherFile creatorWeatherFile = new CreatorWeatherFile();
-	    System.out.println("Let's imagine that this invocation is some fat and major feature that is not ready to be pushed on prod");
+	System.out.println("Let's imagine that this invocation is some fat and major feature that is not ready to be pushed on prod");
 
 
         try {
