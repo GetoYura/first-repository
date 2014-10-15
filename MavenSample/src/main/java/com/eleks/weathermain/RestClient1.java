@@ -5,10 +5,8 @@ import com.eleks.inform.NewInfWeather;
 import com.eleks.parser.ParserJson;
 import com.eleks.parser.ParserXml;
 import com.eleks.parser.Parserable;
+import com.eleks.workwithfile.OpenFile;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.List;
 
 public class RestClient1 {
@@ -22,7 +20,8 @@ public class RestClient1 {
         String formatType = "";
         Parserable weatherParser = null;
 
-        System.out.println(args[0]);
+
+        // check comand line
         try {
             if (args[0].equalsIgnoreCase("XML")) {
 
@@ -36,28 +35,8 @@ public class RestClient1 {
 
             } else if (args[0].equalsIgnoreCase("LOCAL")) {
                 System.out.println("we in local");
-                String sCurrentLine;
-                BufferedReader br = null;
-                try {
-
-                    br = new BufferedReader(new FileReader((args[1])));
-
-                    while ((sCurrentLine = br.readLine()) != null) {
-
-                        fetchResult = fetchResult + sCurrentLine;
-
-                    }
-
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } finally {
-                    try {
-                        if (br != null) br.close();
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
-                }
+                OpenFile openFile = new OpenFile();
+                fetchResult = openFile.parseToString((args[1]));
 
             } else {
 
@@ -65,6 +44,7 @@ public class RestClient1 {
 
             }
 
+            // start parse
             if (args[0].equalsIgnoreCase("XML")) {
                 weatherParser = new ParserXml();
             } else if (args[0].equalsIgnoreCase("JSON")) {
