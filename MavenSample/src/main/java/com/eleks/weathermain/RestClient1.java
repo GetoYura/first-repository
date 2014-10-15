@@ -65,7 +65,6 @@ public class RestClient1 {
 
             }
 
-
             if (args[0].equalsIgnoreCase("XML")) {
                 weatherParser = new ParserXml();
             } else if (args[0].equalsIgnoreCase("JSON")) {
