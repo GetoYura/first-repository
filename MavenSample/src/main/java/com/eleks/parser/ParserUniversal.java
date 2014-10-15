@@ -2,9 +2,11 @@ package com.eleks.parser;
 
 
 import com.eleks.inform.NewInfWeather;
+import org.codehaus.jettison.json.JSONException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import scala.xml.XML;
 
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -19,18 +21,21 @@ public class ParserUniversal implements Parserable {
 
 //        if (str.charAt(0) == '<') {
 //            try {
+//                String soapmessageString = "<xml>yourStringURLorFILE</xml>";
 //                jsonObject = XML.toJSONObject(str);
+//                jsonObject = XML.;
+//                JSONObject soapDatainJsonObject = XML.toJSONObject(soapmessageString);
 //            } catch (JSONException je) {
 //
 //            }
 //        } else {
-
-        try {
-            jsonObject = (JSONObject) jsonParser.parse(str);
-        } catch (org.json.simple.parser.ParseException e) {
-            e.printStackTrace();
-        }
-        // }
+//
+//        try {
+//            jsonObject = (JSONObject) jsonParser.parse(str);
+//        } catch (org.json.simple.parser.ParseException e) {
+//            e.printStackTrace();
+//        }
+//        }
 
 
         ArrayList<Object> list = new ArrayList<Object>();
