@@ -1,4 +1,4 @@
-package com.eleks.xml;
+package com.eleks.parser;
 
 import com.eleks.inform.Location;
 import com.eleks.inform.NewInfWeather;
