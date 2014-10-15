@@ -2,9 +2,6 @@ package com.eleks.inform;
 
 import java.util.ArrayList;
 
-/**
- * Created by Iurii.Geto on 08.10.2014.
- */
 public class WeatherInformation {
     private String chanelltitle;
     private String itemtitle;

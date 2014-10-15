@@ -1,8 +1,6 @@
-package com.eleks.json;
+package com.eleks.parser;
 
-import com.eleks.createfile.AbstractCreatorWeather;
 import com.eleks.inform.NewInfWeather;
-import com.eleks.inform.Weatherable;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -10,23 +8,11 @@ import org.json.simple.parser.JSONParser;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
-public class WeatherJson implements Weatherable {
 
-    private AbstractCreatorWeather creatorWeather;
+public class ParserJson implements Parserable {
 
-    public WeatherJson(AbstractCreatorWeather creatorWeather) {
-        this.creatorWeather = creatorWeather;
-    }
-
-    @Override
-    public List<NewInfWeather> getWeather(String type) {
-        creatorWeather.createWeatherFile(type);
-        return parseJson(creatorWeather.createWeatherString(type));
-    }
-
-    public ArrayList<NewInfWeather> parseJson(String str) {
+    public ArrayList<NewInfWeather> parseString(String str) {
 
         FileReader reader = null;
         JSONObject jsonObject = null;

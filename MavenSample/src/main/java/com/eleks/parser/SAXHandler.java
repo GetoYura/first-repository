@@ -1,4 +1,4 @@
-package com.eleks.xml;
+package com.eleks.parser;
 
 import com.eleks.inform.Location;
 import com.eleks.inform.NewInfWeather;
@@ -9,9 +9,6 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.ArrayList;
 
-/**
- * Created by Iurii.Geto on 08.10.2014.
- */
 public class SAXHandler extends DefaultHandler {
 
     private int titleFlag = 0; // if true than first title

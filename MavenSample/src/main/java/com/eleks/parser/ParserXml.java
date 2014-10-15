@@ -1,10 +1,10 @@
-package com.eleks.xml;
+package com.eleks.parser;
 
-import com.eleks.createfile.AbstractCreatorWeather;
+
 import com.eleks.inform.NewInfWeather;
-import com.eleks.inform.Weatherable;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import com.eleks.parser.SAXHandler;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -12,23 +12,10 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.List;
 
-public class WeatherXml implements Weatherable {
+public class ParserXml implements Parserable {
 
-    private AbstractCreatorWeather creatorWeather;
-
-    public WeatherXml(AbstractCreatorWeather creatorWeather) {
-        this.creatorWeather = creatorWeather;
-    }
-
-    @Override
-    public List<NewInfWeather> getWeather(String type) {
-        //creatorWeather.createWeatherFile(type);
-        return parseXml(creatorWeather.createWeatherString(type));
-    }
-
-    public ArrayList<NewInfWeather> parseXml(String str) {
+    public ArrayList<NewInfWeather> parseString (String str) {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = null;
         try {
@@ -40,8 +27,6 @@ public class WeatherXml implements Weatherable {
         }
         SAXHandler handler = new SAXHandler();
         try {
-            //parser.parse(new File("E:/samplexml.xml"), handler);
-            //new InputSource(new StringReader(xml))
             parser.parse(new InputSource(new StringReader(str)), handler);
 
         } catch (SAXException e) {
@@ -54,11 +39,5 @@ public class WeatherXml implements Weatherable {
 
     }
 
-    public void printList() {
-//        String result = "";
-//        assert parser != null;
-//        parser.parse(String.valueOf(new StringReader(result)), handler);
-    }
+
 }
-
-
