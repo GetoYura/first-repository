@@ -13,7 +13,7 @@ public class RestClient1 {
 
     public static void main(String[] args) {
 
-        Long ts1 = System.currentTimeMillis()
+        Long ts1 = System.currentTimeMillis();
 
         List<NewInfWeather> weatherList = null;
         CreatorWeatherFile creatorWeatherFile = new CreatorWeatherFile();
@@ -71,7 +71,7 @@ public class RestClient1 {
         for (NewInfWeather a : weatherList) {
             System.out.println(a);
         }
-        Long ts2 = System.currentTimeMillis()
+        Long ts2 = System.currentTimeMillis();
         System.out.println ("Application execution took " + (ts2 - ts1)  + "ms");
         System.out.println("----------------------------------------------------------------------");
 
